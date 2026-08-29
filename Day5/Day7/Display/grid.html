@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ body{
+    font-family:Arial, Helvetica, sans-serif;
+    grid-template-columns: repeat(auto-fit,minmax());
+ }
+         .product{
+            border:1px solid black;
+            width:250px;
+            border-radius:10px;
+            margin-bottom:30px;
+            padding:20px;
+            text-align:center;
+            box-shadow:4px 4px 8px black;
+        }
+        .product:hover{
+            background-color:darkolivegreen;
+            transition:2s;
+
+            transform:scale(1.03);
+            color:white;
+        }
+        .product img{
+            width:250px;
+            height:300px;
+            object-fit:cover;
+            border-radius:10px;
+        }
+        .product button{
+            padding:10px;
+            border-radius:12px;
+            width:90%;
+            border:none;
+            background-color:rgb(26, 52, 1);
+            color:ivory;
+        
+        }
+        .products{
+            display:grid;
+            grid-template-columns: repeat(6,1fr);
+            gap:20px;
+        }
+.box{
+    background-color:brown;
+    text-align:center;
+    border:1px solid black;
+    color:beige;
+}
+
+    </style>
+</head>
+<body>
+    <div class="products">
+        <div class="box">Product1</div>
+         <div class="box">Product2</div>
+          <div class="box">Product3</div>
+           <div class="box">Product4</div>
+            <div class="box">Product5</div>
+             <div class="box">Product6</div>
+    </div>
+
+     <div class="product">
+        <img src="https://images.pexels.com/photos/28255124/pexels-photo-28255124.jpeg" height="150" width="150">
+       <h2>Serum</h2>
+        <p>Rs <em><del>499</del></em> 299</p>
+        <button>Buy Now</button>
+
+    </div>
+
+     <div class="product">
+        <img src="https://images.pexels.com/photos/14211239/pexels-photo-14211239.jpeg"  height="150" width="150">
+       <h2>Perfume</h2>
+        <p>Rs <em><del>799</del></em> 499</p>
+        <button>Buy Now</button>
+        
+    </div>
+
+     <div class="product">
+        <img src="https://images.pexels.com/photos/34624326/pexels-photo-34624326.jpeg">
+        <h2>iphone 17 Pro Max</h2>
+        <p>Rs <em><del>1,46,999</del></em> 1,39,999</p>
+        <button>Buy Now</button>
+        
+    </div>
+
+     <div class="product">
+        <img src="https://images.pexels.com/photos/8533587/pexels-photo-8533587.jpeg">
+        <h2>Macbook air M1</h2>
+        <p>Rs <em><del>84,499</del></em> 59,899</p>
+        <button>Buy Now</button>
+        
+    </div>
+</body>
+</html>
