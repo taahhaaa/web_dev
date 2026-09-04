@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FitTrack Pro</title>
+
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #111827;
+    background-color: white;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+
+/* ================= NAVBAR ================= */
+
+header {
+    background-color: #071426;
+}
+
+.navbar {
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+}
+
+.logo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-links a:first-child {
+    color: #1671ed;
+}
+
+.buy-button {
+    background-color: #1769e0;
+    color: white;
+
+    padding: 12px 25px;
+    border-radius: 6px;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 50px 9%;
+
+    background-color: #f3f8ff;
+}
+
+
+/* LEFT SIDE */
+
+.hero-text {
+    width: 50%;
+}
+
+.launch {
+    color: #1769e0;
+    font-size: 13px;
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+.hero-text h1 span {
+    color: #1769e0;
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+
+    color: #374151;
+}
+
+
+/* HERO BUTTONS */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.buy-now {
+    background-color: #1769e0;
+    color: white;
+
+    padding: 13px 25px;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+}
+
+.learn-more {
+    background-color: white;
+    color: #111827;
+
+    border: 1px solid #1769e0;
+
+    padding: 13px 25px;
+
+    border-radius: 6px;
+}
+
+
+/* SMALL BENEFITS */
+
+.small-benefits {
+    display: flex;
+    gap: 30px;
+
+    margin-top: 35px;
+}
+
+.small-benefits div {
+    font-size: 14px;
+}
+
+.small-benefits strong {
+    display: block;
+    margin-top: 5px;
+}
+
+.small-benefits p {
+    color: #6b7280;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+
+/* RIGHT SIDE */
+
+.hero-image {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-background {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-color: #dceaff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 350px;
+    max-width: 100%;
+}
+
+
+/* ================= FEATURES ================= */
+
+.features {
+    padding: 50px 7%;
+    text-align: center;
+}
+
+.section-title {
+    color: #1769e0;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.features h2,
+.reviews h2 {
+    font-size: 25px;
+}
+
+.blue-line {
+    width: 30px;
+    height: 3px;
+    background-color: #1769e0;
+    margin: 12px auto 25px;
+}
+
+
+
+/* FEATURE BOXES */
+
+.feature-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.feature-box {
+    width: 19%;
+    padding: 25px 15px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    min-height: 180px;
+}
+
+.feature-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #eef5ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-size: 22px;
+}
+
+.feature-box h3 {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.feature-box p {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #6b7280;
+}
+
+
+/* ================= BENEFITS ================= */
+
+.benefits {
+    display: flex;
+    align-items: center;
+    padding: 50px 10%;
+    background-color: #f3f8ff;
+}
+
+.benefit-image {
+    width: 35%;
+    text-align: center;
+}
+
+.benefit-image img {
+    width: 280px;
+}
+
+.benefit-text {
+    width: 65%;
+}
+
+.benefit-text h2 {
+    font-size: 26px;
+}
+
+.benefit-text .blue-line {
+    margin: 10px 0 20px;
+}
+
+.benefit-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.benefit-list p {
+    font-size: 14px;
+}
+
+
+/* ================= REVIEWS ================= */
+
+.reviews {
+    padding: 50px 8%;
+    text-align: center;
+}
+
+.review-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.review-box {
+    width: 30%;
+    padding: 25px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.quote {
+    color: #1769e0;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.review-box p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #4b5563;
+    margin-bottom: 15px;
+}
+
+.review-box h3 {
+    font-size: 14px;
+}
+
+.stars {
+    color: #f5b400 ;
+}
+
+
+/* ================= PRICING ================= */
+
+.pricing {
+    margin: 20px 7% 40px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f1f7ff;
+    border-radius: 8px;
+}
+
+.pricing-text {
+    width: 35%;
+}
+
+.pricing-text h2 {
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.pricing-text > p {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.shipping {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.price {
+    width: 20%;
+}
+
+.price h2 {
+    color: #1769e0;
+    font-size: 28px;
+}
+
+.price p {
+    font-size: 12px;
+    margin: 6px 0;
+}
+
+.price-image {
+    width: 18%;
+}
+
+.price-image img {
+    width: 150px;
+}
+
+.pricing > .buy-now {
+    padding: 14px 30px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background-color: #071426;
+    color: white;
+    padding-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 7% 35px;
+    gap: 30px;
+}
+
+.footer-column {
+    width: 20%;
+}
+
+.footer-column h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.footer-column h3 {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.footer-column p {
+    color: #d1d5db;
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    display: block;
+    color: #d1d5db;
+    text-decoration: none;
+    font-size: 12px;
+    margin-bottom: 9px;
+}
+
+.footer-column input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+.footer-column button {
+    width: 100%;
+    padding: 10px;
+    background-color: #1769e0;
+    color: white;
+    border-radius: 5px;
+}
+
+.copyright {
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid #1f2937;
+    color: #d1d5db;
+    font-size: 12px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero-image {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .small-benefits {
+        justify-content: center;
+    }
+
+    .feature-container {
+        flex-direction: column;
+    }
+
+    .feature-box {
+        width: 100%;
+    }
+
+    .benefits {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .benefit-image,
+    .benefit-text {
+        width: 100%;
+    }
+
+    .benefit-text {
+        margin-top: 30px;
+    }
+
+    .benefit-text .blue-line {
+        margin: 10px auto 20px;
+    }
+
+    .benefit-list {
+        grid-template-columns: 1fr;
+    }
+
+    .review-container {
+        flex-direction: column;
+    }
+
+    .review-box {
+        width: 100%;
+    }
+
+    .pricing {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .pricing-text,
+    .price,
+    .price-image {
+        width: 100%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-column {
+        width: 100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+    <!-- ================= NAVIGATION BAR ================= -->
+
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                🔵 FitTrack
+            </div>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#features">Features</a>
+                <a href="#benefits">Benefits</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <button class="buy-button">
+                Buy Now
+            </button>
+
+        </nav>
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero">
+
+        <!-- LEFT SIDE -->
+        <div class="hero-text">
+
+            <p class="launch">  NEW LAUNCH </p>
+
+            <h1>
+                FitTrack Pro
+                <br>
+                <span>Smartwatch</span>
+            </h1>
+
+            <p class="description">
+                Your ultimate fitness and health companion.
+                <br>
+                Track, analyze and improve your everyday.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="buy-now">
+                    🛒 Buy Now
+                </button>
+
+                <button class="learn-more">
+                    Learn More →
+                </button>
+
+            </div>
+
+            <!-- Small Benefits -->
+
+            <div class="small-benefits">
+
+                <div>
+                    🚚
+                    <strong>Free Shipping</strong>
+                    <p>On all orders</p>
+                </div>
+
+                <div>
+                    🛡️
+                    <strong>1 Year Warranty</strong>
+                    <p>Easy Returns</p>
+                </div>
+
+                <div>
+                    🎧
+                    <strong>24/7 Support</strong>
+                    <p>Always here to help</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT SIDE - WATCH IMAGE -->
+
+        <div class="hero-image">
+
+            <div class="image-background">
+
+                <img src="Screenshot 2026-09-03 202704.png" alt="FitTrack Pro Smartwatch",style="">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FEATURES SECTION ================= -->
+
+    <section class="features">
+
+        <p class="section-title">
+            FEATURES
+        </p>
+
+        <h2>
+            Powerful Features for a Better You
+        </h2>
+
+        <div class="blue-line"></div>
+
+
+        <div class="feature-container">
+
+            <!-- Feature 1 -->
+
+            <div class="feature-box">
+
+                <div class="feature-icon">
+                    ❤️
+                </div>
+
+                <h3>
+                    Heart Rate Monitor
+                </h3>
+
+                <p>
+                    24/7 continuous heart rate
+                    tracking and alerts.
+                </p>
+
+            </div>
+
+
+            <!-- Feature 2 -->
+
+            <div class="feature-box">
+
+                <div class="feature-icon">
+                    🏃
+                </div>
+
+                <h3>
+                    Multi-Sport Modes
+                </h3>
+
+                <p>
+                    Track your workouts with
+                    20+ sports modes.
+                </p>
+
+            </div>
+
+
+            <!-- Feature 3 -->
+
+            <div class="feature-box">
+
+                <div class="feature-icon">
+                    🌙
+                </div>
+
+                <h3>
+                    Sleep Tracking
+                </h3>
+
+                <p>
+                    Monitor your sleep quality
+                    and get better rest.
+                </p>
+
+            </div>
+
+
+            <!-- Feature 4 -->
+
+            <div class="feature-box">
+
+                <div class="feature-icon">
+                    💧
+                </div>
+
+                <h3>
+                    Water Resistant
+                </h3>
+
+                <p>
+                    5ATM water resistance —
+                    swim, sweat, no worries.
+                </p>
+
+            </div>
+
+
+            <!-- Feature 5 -->
+
+            <div class="feature-box">
+
+                <div class="feature-icon">
+                    🔋
+                </div>
+
+                <h3>
+                    7-Day Battery
+                </h3>
+
+                <p>
+                    Up to 7 days of battery
+                    life on a single charge.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= BENEFITS SECTION ================= -->
+
+    <section class="benefits">
+
+        <!-- Watch image -->
+
+        <div class="benefit-image">
+
+            <img src="Screenshot 2026-09-03 205709.png"
+                 alt="FitTrack Watch">
+
+        </div>
+
+
+        <!-- Benefits text -->
+
+        <div class="benefit-text">
+
+            <p class="section-title">
+                BENEFITS
+            </p>
+
+            <h2>
+                Why Choose FitTrack Pro?
+            </h2>
+
+            <div class="blue-line"></div>
+
+
+            <div class="benefit-list">
+
+                <p>✓ Stay on top of your health goals</p>
+
+                <p>✓ Boost productivity and performance</p>
+
+                <p>✓ Real-time insights that empower you</p>
+
+                <p>✓ Seamless sync with your devices</p>
+
+                <p>✓ Designed for comfort & style</p>
+
+                <p>✓ Made for an active lifestyle</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= REVIEWS SECTION ================= -->
+
+    <section class="reviews">
+
+        <p class="section-title">
+            TESTIMONIALS
+        </p>
+
+        <h2>
+            What Our Customers Say
+        </h2>
+
+        <div class="blue-line"></div>
+
+
+        <div class="review-container">
+
+            <!-- Review 1 -->
+
+            <div class="review-box">
+
+                <div class="quote">
+                    ❝
+                </div>
+
+                <p>
+                    FitTrack Pro has completely changed
+                    the way I track my fitness. The accuracy
+                    is amazing!
+                </p>
+
+                <h3>
+                    Rohit Sharma
+                </h3>
+
+                <p class="stars">
+                    ⭐⭐⭐⭐⭐
+                </p>
+
+            </div>
+
+
+            <!-- Review 2 -->
+
+            <div class="review-box">
+
+                <div class="quote">
+                    ❝
+                </div>
+
+                <p>
+                    I love the sleep tracking feature.
+                    It helps me understand my sleep
+                    patterns so much better.
+                </p>
+
+                <h3>
+                    Ananya Desai
+                </h3>
+
+                <p class="stars">
+                    ⭐⭐⭐⭐⭐
+                </p>
+
+            </div>
+
+
+            <!-- Review 3 -->
+
+            <div class="review-box">
+
+                <div class="quote">
+                    ❝
+                </div>
+
+                <p>
+                    Stylish, lightweight and packed
+                    with useful features. Totally worth it!
+                </p>
+
+                <h3>
+                    Vikram Mehta
+                </h3>
+
+                <p class="stars">
+                    ⭐⭐⭐⭐⭐
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= PRICING SECTION ================= -->
+
+    <section class="pricing">
+
+        <div class="pricing-text">
+
+            <p class="section-title">
+                BEST VALUE
+            </p>
+
+            <h2>
+                Get FitTrack Pro Today!
+            </h2>
+
+            <p>
+                Limited time offer. Grab yours now and
+                start your journey to a healthier you.
+            </p>
+
+            <div class="shipping">
+
+                🚚 Free Shipping
+
+                &nbsp;&nbsp;&nbsp;
+
+                🛡️ 1 Year Warranty
+
+            </div>
+
+        </div>
+
+
+        <div class="price">
+
+            <h2>
+                ₹4,999
+            </h2>
+
+            <p>Only</p>
+
+            <p>✓ All features included</p>
+            <p>✓ 1 Year warranty</p>
+            <p>✓ Free shipping</p>
+            <p>✓ 7-day return policy</p>
+
+        </div>
+
+
+        <div class="price-image">
+
+            <img src="Screenshot 2026-09-03 205724.png"
+                 alt="FitTrack Pro">
+
+        </div>
+
+
+        <button class="buy-now">
+            Buy Now 🛒
+        </button>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-container">
+
+
+            <!-- Company -->
+
+            <div class="footer-column">
+
+                <h2> 🔵 FitTrack </h2>
+
+                <p>
+                    FitTrack Pro is your all-in-one
+                    smartwatch designed to keep you
+                    healthy, active and connected.
+                </p>
+
+                <p>
+                    ● &nbsp; ◎ &nbsp; ♥ &nbsp; ▶
+                </p>
+
+            </div>
+
+
+            <!-- Quick Links -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="#">Home</a>
+                <a href="#">Features</a>
+                <a href="#">Benefits</a>
+                <a href="#">Reviews</a>
+                <a href="#">Pricing</a>
+                <a href="#">Contact</a>
+
+            </div>
+
+
+            <!-- Support -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Support
+                </h3>
+
+                <a href="#">FAQs</a>
+                <a href="#">Shipping & Delivery</a>
+                <a href="#">Returns</a>
+                <a href="#">Warranty</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+
+            </div>
+
+
+            <!-- Contact -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Contact Us
+                </h3>
+
+                <p>
+                    📞 +91 98765 43210
+                </p>
+
+                <p>
+                    ✉ support@fittrack.com
+                </p>
+
+                <p>
+                    📍 123, Fitness Street,
+                    <br>
+                    Bangalore, India - 560001
+                </p>
+
+            </div>
+
+
+            <!-- Newsletter -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Newsletter
+                </h3>
+
+                <p>
+                    Subscribe to get updates on new
+                    features and offers.
+                </p>
+
+                <input
+                    type="email"
+                    placeholder="Enter your email">
+
+                <button>
+                    Subscribe
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2025 FitTrack. All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
